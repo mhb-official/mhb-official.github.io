@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="KsMt63KRZOYqdloeL8jUsv2EtHfv-ew0FY_0_ScTXp4" />
-    <title>개인정보처리방침 - Mandalart</title>
+    <meta name="google-site-verification" content="KsMt63KRZOYqdloeL8jUsv2EtHfv-ew0FY_0_ScTX4p" />
+    <title>개인정보 처리방침 - Mandalart</title>
     <style>
         body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #f9f9f9; }
         .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
@@ -13,6 +13,10 @@
         p, li { font-size: 1.05em; color: #555; }
         ul { padding-left: 20px; }
         li { margin-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; vertical-align: top; color: #555; }
+        th { background-color: #f5f8ff; color: #333; white-space: nowrap; }
+        .notice { background: #f5f8ff; border: 1px solid #d7e5ff; border-radius: 8px; padding: 14px 16px; }
         .footer { margin-top: 60px; font-size: 0.9em; color: #888; border-top: 1px solid #eee; padding-top: 25px; }
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
@@ -21,51 +25,115 @@
 </head>
 <body>
     <div class="container">
-        <h1>개인정보처리방침 (Privacy Policy)</h1>
-        <p>본 개인정보처리방침은 <strong>Mandalart</strong>(이하 '앱')를 이용하는 사용자의 개인정보 보호를 소중히 여기며, 관련 법령 및 구글 플레이 정책을 준수하기 위해 작성되었습니다. 본 방침은 앱이 수집하는 정보의 종류, 이용 목적, 그리고 정보 보호를 위한 조치에 대해 설명합니다.</p>
+        <h1>개인정보 처리방침</h1>
+        <p><strong>M&amp;HB</strong>(이하 '개발자')는 <strong>Mandalart</strong>(이하 '앱') 이용자의 개인정보를 소중히 여기며, 「개인정보 보호법」 등 관련 법령과 Google Play 정책을 준수하기 위해 노력합니다. 이 방침은 앱에서 처리하는 개인정보의 항목, 목적, 보유기간, 외부 서비스 이용 및 이용자의 권리를 설명합니다.</p>
 
-        <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
-        <p>본 앱은 원활한 서비스 제공을 위해 다음과 같은 정보를 수집하거나 외부 서비스로부터 제공받습니다.</p>
+        <div class="notice">
+            <strong>핵심 안내</strong><br>
+            만다라트 작성 기능은 로그인 없이 기기에서 이용할 수 있습니다. Google 로그인, Google Drive 백업, AI 기능 및 기기 변경 시 자동 로그인 복구 기능은 선택적으로 이용할 수 있습니다. 백업 파일 본문은 개발자 자체 서버에 보관하지 않고 사용자의 Google Drive 앱 전용 저장공간(App Data Folder)에 저장합니다.
+        </div>
+
+        <h2>1. 처리하는 개인정보 항목 및 수집 방법</h2>
+        <p>앱은 기능 이용 시 다음 정보를 처리합니다. 로그인·백업·AI·자동 복구 기능을 이용하지 않으면 해당 기능에 필요한 정보는 처리되지 않습니다.</p>
+        <table>
+            <tr><th>구분</th><th>처리하는 정보</th><th>처리 방법 및 이용 시점</th></tr>
+            <tr><td>Google 로그인 및 Firebase 인증</td><td>Google 계정 이메일, 표시 이름, 프로필 사진, Google/Firebase 사용자 식별자(UID), 인증·보안 관련 기술정보</td><td>사용자가 Google 로그인을 선택하거나 로그인 상태를 확인할 때 사용자 식별, 인증 및 세션 유지에 이용</td></tr>
+            <tr><td>만다라트 및 백업</td><td>사용자가 작성한 목표·하위 목표·실천 기록·설정 등 만다라트 데이터</td><td>기기 내 저장. 사용자가 Google Drive 백업을 이용하면 Google Drive의 앱 전용 저장공간에 백업·복원</td></tr>
+            <tr><td>AI 기능</td><td>AI 기능을 위해 사용자가 입력하거나 앱이 요청에 포함하는 목표·하위 목표·달성 기록 등의 텍스트</td><td>사용자가 AI 기능 이용에 동의한 경우 목표 추천·분석 및 회고 생성에 이용</td></tr>
+            <tr><td>Restore Credentials</td><td>Firebase UID, WebAuthn 자격 증명 ID, 공개키, 서명 카운터, 전송 방식, 기기 유형·백업 상태, 일회성 challenge 및 처리 시각</td><td>기기 변경 시 로그인 상태를 자동 복구하기 위해 처리. 비밀번호와 WebAuthn 개인키는 서버로 전송하거나 저장하지 않음</td></tr>
+            <tr><td>Firebase Analytics</td><td>앱 상호작용·화면 이동 등 사용 통계, 앱 버전, 기기·운영체제·언어 등 기술정보 및 Firebase 설치 식별자</td><td>서비스 이용 현황 분석 및 품질 개선을 위해 릴리스 앱에서 자동 처리</td></tr>
+            <tr><td>Firebase Crashlytics 및 App Check</td><td>오류·크래시 정보, 앱·기기 환경 정보, Crashlytics/Firebase 설치 식별자, Play Integrity 기반 앱 무결성 확인 정보 및 네트워크 기술정보</td><td>오류 분석, 보안, 부정 사용 방지 및 안정성 개선을 위해 자동 처리</td></tr>
+        </table>
+        <p>앱은 비밀번호, 주민등록번호, 위치정보, 연락처, 광고 식별자(ADID)를 수집하지 않습니다. 사용자가 만다라트에 개인정보나 민감한 내용을 직접 입력하는 경우 해당 내용이 앱의 저장·백업·AI 요청에 포함될 수 있으므로, AI 기능에는 필요한 정보만 입력해 주시기 바랍니다.</p>
+
+        <h2>2. 개인정보의 처리 목적</h2>
         <ul>
-            <li><strong>구글 로그인 (Google Sign-In):</strong> 사용자가 로그인을 선택할 경우, 구글로부터 이메일 주소, 이름, 프로필 사진 정보를 제공받습니다. 이 정보는 사용자 식별 및 기기 간 데이터 동기화를 위해 사용됩니다.</li>
-            <li><strong>구글 드라이브 백업:</strong> 사용자가 백업 기능을 실행할 경우, 만다르트 데이터(텍스트 및 설정)를 사용자의 구글 드라이브 내 앱 전용 저장 공간(App Data Folder)에 저장합니다. 앱은 이 공간 외의 다른 파일에는 접근하지 않습니다.</li>
-            <li><strong>AI 기능 (Google Gemini API):</strong> 만다르트 목표 생성 및 분석 기능을 위해 사용자가 입력한 텍스트 데이터가 Google Gemini API로 전송됩니다. 이 데이터는 분석 및 결과 생성을 위해 일시적으로 사용되며, 모델의 학습 데이터로 활용되거나 서버에 영구 저장되지 않습니다.</li>
+            <li><strong>서비스 제공:</strong> 만다라트 작성, 저장, 설정 및 알림 기능 제공</li>
+            <li><strong>인증 및 계정 관리:</strong> Google 로그인, Firebase 세션 유지 및 기기 변경 시 안전한 로그인 상태 복구</li>
+            <li><strong>백업 및 복구:</strong> 사용자가 요청한 Google Drive 백업과 데이터 복원</li>
+            <li><strong>AI 기능 제공:</strong> 목표 추천, 실천 항목 생성 및 회고·분석 결과 제공</li>
+            <li><strong>서비스 개선 및 보안:</strong> 사용 통계 분석, 오류·크래시 분석, 앱 무결성 확인 및 부정 사용 방지</li>
         </ul>
 
-        <h2>2. 개인정보의 이용 목적</h2>
-        <p>수집된 정보는 다음의 목적으로만 이용됩니다.</p>
+        <h2>3. 개인정보의 보유 및 이용 기간</h2>
+        <p>개발자는 처리 목적에 필요한 기간 동안만 개인정보를 보유하며, 목적이 달성되거나 이용자가 삭제를 요청하면 관련 법령상 보존이 필요한 경우를 제외하고 지체 없이 삭제합니다.</p>
+        <table>
+            <tr><th>정보</th><th>보유 및 이용 기간</th></tr>
+            <tr><td>기기 내 앱 데이터</td><td>이용자가 앱에서 삭제하거나 앱 데이터를 초기화·삭제할 때까지. Android 자동 백업 및 기기 이전 데이터는 Google의 백업 정책과 이용자 기기 설정에 따라 복원·보관될 수 있음</td></tr>
+            <tr><td>Google Drive 백업 파일</td><td>이용자가 앱의 클라우드 백업 삭제 기능 또는 Google Drive에서 삭제할 때까지. 개발자 자체 서버에는 백업 파일 본문을 보관하지 않음</td></tr>
+            <tr><td>Firebase 인증 정보</td><td>앱 계정 및 인증 제공에 필요한 기간. 이용자의 계정 삭제 요청 또는 개발자의 삭제 처리 후 Firebase 서비스의 삭제 절차에 따름</td></tr>
+            <tr><td>Restore Credentials 메타데이터</td><td>자동 로그인 복구 기능 제공에 필요한 기간. 이용자의 계정·복구 자격 증명 삭제 요청 또는 목적 달성·종료 시 삭제</td></tr>
+            <tr><td>Restore Credentials challenge</td><td>요청 처리에 필요한 단기간. 각 challenge는 발급 후 최대 5분 동안만 유효하며, 사용·만료된 요청은 보안 및 운영 절차에 따라 정리</td></tr>
+            <tr><td>AI 입력 및 결과</td><td>AI 응답 생성에 필요한 처리 기간. 앱의 AI 기능은 응답 결과를 기기 내 캐시에 저장할 수 있으며, AI 제공자의 처리·보관 정책이 적용될 수 있음</td></tr>
+            <tr><td>Firebase Analytics</td><td>Firebase/Google Analytics 속성의 보존 설정에 따른 기간</td></tr>
+            <tr><td>Firebase Crashlytics</td><td>Firebase 공식 처리정책에 따라 일반적으로 90일 동안 처리 후 삭제 절차 진행</td></tr>
+        </table>
+
+        <h2>4. 개인정보의 제3자 제공 및 처리위탁</h2>
+        <p>개발자는 이용자의 개인정보를 판매하지 않습니다. 아래 외부 서비스는 앱 기능 제공을 위해 개인정보 처리를 위탁받거나 서비스 제공 과정에서 정보를 처리할 수 있습니다.</p>
+        <table>
+            <tr><th>수탁자·서비스</th><th>처리 목적</th><th>처리 정보</th></tr>
+            <tr><td>Google LLC / Google Sign-In, Firebase Authentication</td><td>Google 로그인, 사용자 인증 및 세션 관리</td><td>계정 식별정보, 인증·보안 기술정보</td></tr>
+            <tr><td>Google LLC / Google Drive</td><td>사용자 요청에 따른 백업·복원</td><td>만다라트 백업 데이터, Drive 파일 식별정보</td></tr>
+            <tr><td>Google LLC / Firebase Firestore, Cloud Functions</td><td>Restore Credentials의 challenge·자격 증명 메타데이터 저장 및 WebAuthn 검증</td><td>Firebase UID, WebAuthn 공개키·자격 증명 메타데이터, challenge, 접속 기술정보</td></tr>
+            <tr><td>Google LLC / Firebase AI Logic 및 Agent Platform Gemini</td><td>AI 목표 추천·분석 및 회고 생성</td><td>사용자가 AI 요청에 포함한 텍스트 및 생성 결과</td></tr>
+            <tr><td>Google LLC / Firebase Analytics, Crashlytics, App Check</td><td>사용 통계, 오류 분석, 앱 무결성 및 보안</td><td>앱·기기·오류·설치·네트워크 기술정보</td></tr>
+        </table>
+        <p>각 서비스의 처리에는 해당 사업자의 약관과 개인정보 처리방침이 함께 적용됩니다. 개발자는 외부 서비스가 제공하는 관리 기능과 계약상 보호조치를 활용하여 접근을 최소화합니다.</p>
+
+        <h2>5. 개인정보의 국외 이전</h2>
+        <p>Google 계정, Firebase, Google Drive 및 AI 기능을 이용하면 서비스 제공을 위해 다음과 같이 개인정보가 국외로 이전되거나 국외에서 처리될 수 있습니다.</p>
+        <table>
+            <tr><th>항목</th><th>내용</th></tr>
+            <tr><td>이전받는 자</td><td>Google LLC 및 Google Cloud/Firebase 서비스</td></tr>
+            <tr><td>이전되는 국가·지역</td><td>Firebase Authentication은 미국 데이터센터에서 처리됩니다. Firebase Analytics·Crashlytics·App Check·Cloud Functions 등은 Google의 글로벌 인프라에서 처리될 수 있습니다. 본 프로젝트의 Firestore와 Cloud Functions 기본 리전은 대한민국(서울, asia-northeast3)이며, AI 요청은 현재 global 위치의 Agent Platform Gemini로 처리됩니다.</td></tr>
+            <tr><td>이전 항목</td><td>제1조의 Google 계정·인증정보, 백업 데이터, Restore Credentials 메타데이터, AI 입력·결과, 앱 사용·오류·보안 기술정보</td></tr>
+            <tr><td>이전 시기·방법</td><td>로그인, 백업, AI, 오류 분석, 보안 확인 및 자동 복구 기능을 이용하는 시점에 TLS 등 암호화된 통신으로 전송·처리</td></tr>
+            <tr><td>이용 목적·보유 기간</td><td>제2조의 서비스 제공 목적 및 제3조의 정보별 보유 기간에 따름</td></tr>
+            <tr><td>거부 방법 및 효과</td><td>Google 로그인, 백업, AI 및 자동 복구 기능을 사용하지 않으면 해당 국외 이전을 거부할 수 있습니다. 이 경우 로그인·백업·AI·자동 복구 기능을 이용할 수 없지만, 만다라트 기본 작성 기능은 기기에서 이용할 수 있습니다.</td></tr>
+        </table>
+        <p>국외 이전과 관련한 각 사업자의 상세 처리 내용은 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보 처리방침</a> 및 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보·보안 안내</a>에서 확인할 수 있습니다.</p>
+
+        <h2>6. 개인정보의 파기 및 삭제 방법</h2>
         <ul>
-            <li><strong>사용자 식별 및 관리:</strong> 로그인을 통한 사용자 본인 확인.</li>
-            <li><strong>데이터 보관 및 복구:</strong> 사용자가 작성한 데이터를 안전하게 백업하고 기기 변경 시 복구.</li>
-            <li><strong>서비스 품질 개선:</strong> AI 기반 피드백 및 목표 추천 기능 제공.</li>
+            <li><strong>기기 내 데이터:</strong> 앱 내 데이터 삭제, Android 앱 데이터 초기화 또는 앱 삭제로 삭제할 수 있습니다. 단, Android 자동 백업·기기 이전 데이터는 Google 백업 정책에 따라 별도로 남거나 복원될 수 있습니다.</li>
+            <li><strong>Google Drive 백업:</strong> 앱의 클라우드 백업 삭제 기능 또는 Google Drive에서 직접 삭제할 수 있습니다.</li>
+            <li><strong>로그아웃:</strong> 기기의 Google·Firebase 세션과 기기 내 복구 자격 증명 상태를 해제합니다. 로그아웃만으로 서버에 저장된 Firebase 계정 또는 Restore Credentials 메타데이터가 자동 삭제되는 것은 아니므로, 완전한 삭제가 필요한 경우 아래 연락처로 요청해 주세요.</li>
+            <li><strong>계정 및 서버 데이터 삭제 요청:</strong> 앱 계정, Firebase 인증 정보 및 Restore Credentials 메타데이터의 삭제를 원하면 <a href="mailto:mandalart.support@gmail.com?subject=Mandalart%20%EA%B3%84%EC%A0%95%20%EB%B0%8F%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD">mandalart.support@gmail.com</a>으로 앱 계정 식별에 필요한 최소 정보를 보내 주세요. 본인 확인 후 관련 데이터를 삭제하고 처리 결과를 안내합니다.</li>
+            <li><strong>삭제 예외:</strong> 관계 법령상 보존이 필요하거나 보안·부정 사용 방지를 위해 필요한 최소 정보는 해당 목적이 끝날 때까지 보존할 수 있습니다.</li>
         </ul>
 
-        <h2>3. 개인정보의 제3자 제공</h2>
-        <p>본 앱은 사용자의 동의 없이 개인정보를 외부에 판매하거나 제공하지 않습니다. 다만, 핵심 기능 제공을 위해 아래와 같은 글로벌 신뢰 파트너의 서비스를 이용하며, 각 서비스의 정책에 따라 데이터가 처리됩니다.</p>
+        <h2>7. 개인정보의 안전성 확보 조치</h2>
         <ul>
-            <li><strong>Google LLC:</strong> 사용자 인증, 데이터 백업 및 AI 분석 기능 제공.</li>
+            <li>모든 외부 통신에 TLS 암호화를 적용합니다.</li>
+            <li>Firebase Authentication·Firestore·Cloud Functions 등 Google Cloud 서비스의 접근제어 및 저장 시 암호화 기능을 사용합니다.</li>
+            <li>Google OAuth를 사용하며 앱이 Google 비밀번호를 직접 수집·저장하지 않습니다.</li>
+            <li>Restore Credentials는 WebAuthn 검증을 신뢰할 수 있는 서버에서 수행하고, 개인키는 Android Credential Manager가 관리하며 서버에 전송하지 않습니다.</li>
+            <li>Firebase App Check 및 Android Play Integrity를 활용해 비정상적인 앱·요청을 줄입니다.</li>
+            <li>광고 식별자(ADID) 수집을 비활성화하고, 서비스 제공에 필요한 범위로 접근을 제한합니다.</li>
         </ul>
 
-        <h2>4. 개인정보의 보유 및 파기</h2>
+        <h2 id="data-deletion">8. 정보주체의 권리 및 행사 방법</h2>
+        <p>이용자는 개인정보의 열람, 정정, 삭제, 처리정지 및 동의 철회 등을 요청할 수 있습니다. 앱에서 로그아웃·Google Drive 백업 삭제를 직접 수행할 수 있으며, Firebase 계정·Restore Credentials 메타데이터 등 서버 데이터의 삭제나 기타 권리 행사는 <a href="mailto:mandalart.support@gmail.com">mandalart.support@gmail.com</a>으로 요청해 주세요. 개발자는 본인 확인 후 관련 법령에 따라 지체 없이 처리합니다.</p>
+
+        <h2>9. 만 14세 미만 아동의 개인정보</h2>
+        <p>본 앱은 만 14세 미만 아동을 주 이용 대상으로 하지 않으며, 해당 아동의 개인정보를 의도적으로 수집하지 않습니다. 만 14세 미만 아동의 개인정보가 보호자의 동의 없이 제공된 사실을 확인하면 관련 법령에 따라 필요한 조치를 취합니다.</p>
+
+        <h2>10. 개인정보 보호책임자 및 문의처</h2>
+        <p>개인정보 처리와 관련한 문의, 권리 행사, 불만 처리 및 피해 구제 요청은 다음 연락처로 접수할 수 있습니다.</p>
         <ul>
-            <li><strong>앱 내부 데이터:</strong> 앱 삭제 시 모든 로컬 데이터는 즉시 삭제됩니다.</li>
-            <li><strong>클라우드 데이터:</strong> 구글 드라이브에 저장된 데이터는 사용자가 직접 삭제하거나 앱 내 관리 메뉴를 통해 언제든지 파기할 수 있습니다.</li>
-            <li><strong>로그아웃:</strong> 사용자가 계정 연동을 해제하면 해당 시점부터 정보 이용이 중단됩니다.</li>
+            <li><strong>개인정보 보호책임자:</strong> M&amp;HB 대표</li>
+            <li><strong>개인정보 보호업무 및 고충사항 처리 연락처:</strong> <a href="mailto:mandalart.support@gmail.com">mandalart.support@gmail.com</a></li>
         </ul>
+        <p>개인정보 침해 신고나 상담은 개인정보침해 신고센터(<a href="https://privacy.kisa.or.kr" target="_blank" rel="noopener">privacy.kisa.or.kr</a>, 국번 없이 118), 개인정보 분쟁조정위원회(<a href="https://www.kopico.go.kr" target="_blank" rel="noopener">www.kopico.go.kr</a>, 1833-6972)에 문의할 수 있습니다.</p>
 
-        <h2>5. 사용자의 권리</h2>
-        <p>사용자는 언제든지 앱 내 설정을 통해 자신의 개인정보를 확인하거나 데이터 삭제를 요청할 수 있는 권리를 가집니다.</p>
-
-        <h2>6. 문의처</h2>
-        <p>개인정보 처리와 관련하여 문의 사항이 있으시면 아래로 연락해 주시기 바랍니다.</p>
-        <p>
-            이메일: <a href="mailto:mandalart.support@gmail.com">mandalart.support@gmail.com</a><br>
-            개발자명: M&HB (mhb-official)
-        </p>
+        <h2>11. 개인정보 처리방침의 변경</h2>
+        <p>본 방침의 내용이 추가·삭제·수정되는 경우 시행 전에 본 페이지를 통해 공지합니다. 중요한 변경이 있는 경우 변경 내용과 시행일을 명확히 안내합니다.</p>
 
         <div class="footer">
             공포일자: 2026년 5월 3일<br>
-            시행일자: 2026년 5월 3일
+            최종 개정일자: 2026년 8월 31일<br>
+            시행일자: 2026년 8월 31일
         </div>
     </div>
 </body>
